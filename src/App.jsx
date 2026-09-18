@@ -7,10 +7,7 @@ import React, { useEffect, useRef, useState, useCallback } from "react";
  * données, discrimination, stalkerware).
  *
  * Aucune dépendance externe. Bascule clair/sombre intégrée (persistée dans
- * localStorage). Les polices sont chargées via @import dans le <style>
- * injecté ci-dessous — en production, préfère les déclarer dans le <head>
- * de ton index.html pour de meilleures performances de chargement :
- *   Fraunces, Space Grotesk, JetBrains Mono (Google Fonts).
+ * localStorage).
  */
 
 const TRACKERS = [
@@ -227,8 +224,6 @@ export default function MythDuMicro() {
   return (
     <div className="mtm-root" data-theme={theme} ref={rootRef}>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
-
         .mtm-root {
           --bg: #12181A;
           --bg-soft: #161E20;
